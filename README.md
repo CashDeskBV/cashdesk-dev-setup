@@ -61,6 +61,23 @@ This repository contains everything needed to set up a complete CashDesk V3 deve
 - **.NET 7.0 SDK** - For building and running applications
 - **Node.js** (if needed for any frontend tooling)
 
+### Script Execution Notes
+
+**Linux/macOS users**: If shell scripts are not executable after cloning:
+```bash
+chmod +x setup-dev-environment.sh
+chmod +x scripts/*.sh
+```
+
+**Windows PowerShell users**: Git-cloned scripts may be blocked by execution policy:
+```powershell
+# Run setup script with bypass (recommended)
+PowerShell -ExecutionPolicy Bypass -File .\setup-dev-environment.ps1
+
+# Alternative: Unblock all PowerShell scripts after cloning
+Get-ChildItem -Path . -Filter "*.ps1" -Recurse | Unblock-File
+```
+
 ## Repository Structure
 
 ```
