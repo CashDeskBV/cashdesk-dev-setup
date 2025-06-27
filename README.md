@@ -85,8 +85,19 @@ cashdesk-dev/
 │   ├── development-guide.md       # Development guidelines
 │   ├── troubleshooting.md         # Common issues and solutions
 │   └── architecture-overview.md   # System architecture
+├── .gitignore                     # Ignores cloned repositories
 └── README.md                      # This file
+
+# After setup, cloned repositories appear here:
+├── CashDesk.Application/          # (git-ignored)
+├── CashDesk.Web/                  # (git-ignored)
+├── CashDesk.Admin/                # (git-ignored)
+├── CashDesk.Portal/               # (git-ignored)
+├── CashDesk.Identity/             # (git-ignored)
+└── ... other services            # (git-ignored)
 ```
+
+**Important**: The `.gitignore` file ensures that cloned CashDesk repositories maintain their own Git history and are not tracked by the meta repository.
 
 ## Usage
 

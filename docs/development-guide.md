@@ -12,6 +12,11 @@ After running the setup script, your environment will have:
 - NuGet packages restored
 - Development scripts ready
 
+**Git Repository Isolation**: Each cloned CashDesk repository maintains its own Git history. The meta repository (cashdesk-dev-setup) ignores all cloned repositories, so:
+- You can commit changes in individual service repositories normally
+- The meta repository only tracks setup scripts and configuration
+- No conflicts between meta repository and service repositories
+
 ### 2. Daily Development Workflow
 
 **Start Development Session:**

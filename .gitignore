@@ -1,0 +1,58 @@
+# CashDesk V3 Development Setup - Git Ignore
+# This file ensures the meta repository doesn't track the cloned CashDesk repositories
+
+# Cloned CashDesk repositories (these have their own git history)
+CashDesk.Application/
+CashDesk.Harmony/
+CashDesk.Identity/
+CashDesk.Web/
+CashDesk.Portal/
+CashDesk.Admin/
+CashDesk.Payments/
+CashDesk.AI/
+CashDesk.Connect/
+CashDesk.ExternalMenuProvider/
+
+# Any other CashDesk.* directories that might be cloned
+CashDesk.*/
+
+# Docker data (contains runtime data, backups, logs)
+docker-data/
+
+# Development logs from services
+logs/
+*.log
+
+# NuGet configuration (copied from config/ during setup)
+nuget.config
+
+# Docker Compose file (copied from config/ during setup)
+docker-compose.yml
+
+# Runtime and temporary files
+*.tmp
+*.temp
+.env
+.env.local
+
+# IDE and editor files
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Process ID files from development scripts
+*.pid
+running_services.pid
