@@ -3,7 +3,7 @@
     {
       "name": "CashDesk.Application",
       "url": "https://github.com/CashDeskBV/CashDesk.Application.git",
-      "branch": "main",
+      "branch": "master",
       "description": "Shared packages and core framework",
       "required": true,
       "buildOrder": 1
@@ -11,15 +11,15 @@
     {
       "name": "CashDesk.Harmony", 
       "url": "https://github.com/CashDeskBV/CashDesk.Harmony.git",
-      "branch": "main",
-      "description": "Harmony integration service",
+      "branch": "master",
+      "description": "A beginning rewrite of the old Harmony API",
       "required": false,
       "buildOrder": 2
     },
     {
       "name": "CashDesk.Identity",
       "url": "https://github.com/CashDeskBV/CashDesk.Identity.git", 
-      "branch": "main",
+      "branch": "master",
       "description": "Authentication and authorization service",
       "required": true,
       "buildOrder": 3,
@@ -29,7 +29,7 @@
     {
       "name": "CashDesk.Web",
       "url": "https://github.com/CashDeskBV/CashDesk.Web.git",
-      "branch": "main", 
+      "branch": "master", 
       "description": "Main POS application",
       "required": true,
       "buildOrder": 4,
@@ -40,7 +40,7 @@
     {
       "name": "CashDesk.Portal",
       "url": "https://github.com/CashDeskBV/CashDesk.Portal.git",
-      "branch": "main",
+      "branch": "master",
       "description": "Customer portal",
       "required": true, 
       "buildOrder": 5,
@@ -50,7 +50,7 @@
     {
       "name": "CashDesk.Admin",
       "url": "https://github.com/CashDeskBV/CashDesk.Admin.git",
-      "branch": "main",
+      "branch": "master",
       "description": "Administrative interface", 
       "required": true,
       "buildOrder": 6,
@@ -61,7 +61,7 @@
     {
       "name": "CashDesk.Payments",
       "url": "https://github.com/CashDeskBV/CashDesk.Payments.git", 
-      "branch": "main",
+      "branch": "master",
       "description": "Payment processing service",
       "required": false,
       "buildOrder": 7,
@@ -71,7 +71,7 @@
     {
       "name": "CashDesk.AI",
       "url": "https://github.com/CashDeskBV/CashDesk.AI.git",
-      "branch": "main", 
+      "branch": "master", 
       "description": "AI-related components",
       "required": false,
       "buildOrder": 8,
@@ -81,7 +81,7 @@
     {
       "name": "CashDesk.Connect",
       "url": "https://github.com/CashDeskBV/CashDesk.Connect.git",
-      "branch": "main",
+      "branch": "master",
       "description": "Desktop connection utility", 
       "required": false,
       "buildOrder": 9,
@@ -91,7 +91,7 @@
     {
       "name": "CashDesk.ExternalMenuProvider",
       "url": "https://github.com/CashDeskBV/CashDesk.ExternalMenuProvider.git",
-      "branch": "main",
+      "branch": "master",
       "description": "External menu integration service",
       "required": false, 
       "buildOrder": 10,
@@ -100,7 +100,7 @@
     }
   ],
   "settings": {
-    "defaultBranch": "main",
+    "defaultBranch": "master",
     "parallelClone": true,
     "autoRestore": true,
     "autoBuild": false
