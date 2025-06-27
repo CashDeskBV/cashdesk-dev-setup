@@ -1,0 +1,51 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost,1433;Database=CashDeskPortal;User Id=sa;Password=<YourStrong@Passw0rd>;TrustServerCertificate=true;",
+    "IdentityConnection": "Server=localhost,1433;Database=CashDeskIdentity;User Id=sa;Password=<YourStrong@Passw0rd>;TrustServerCertificate=true;"
+  },
+  "ServiceEndpoints": {
+    "IdentityService": "https://localhost:5000",
+    "WebService": "https://localhost:5003",
+    "AdminService": "https://localhost:5001",
+    "PaymentsService": "https://localhost:5004"
+  },
+  "RabbitMQ": {
+    "HostName": "localhost",
+    "Port": 5672,
+    "UserName": "guest",
+    "Password": "guest",
+    "VirtualHost": "/",
+    "Enabled": true
+  },
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "Microsoft.Hosting.Lifetime": "Information",
+        "Microsoft.EntityFrameworkCore": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "Seq",
+        "Args": {
+          "serverUrl": "http://localhost:5341"
+        }
+      }
+    ]
+  },
+  "DeveloperSettings": {
+    "EnableDeveloperExceptionPage": true,
+    "EnableSwagger": true,
+    "DisableHttpsRedirection": false,
+    "EnableDetailedErrors": true,
+    "BypassAuthentication": false
+  },
+  "Organisation": {
+    "OrganisationId": "dev-local"
+  }
+}

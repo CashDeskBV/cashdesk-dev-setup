@@ -1,0 +1,54 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost,1433;Database=CashDeskIdentity;User Id=sa;Password=<YourStrong@Passw0rd>;TrustServerCertificate=true;"
+  },
+  "ServiceEndpoints": {
+    "WebService": "https://localhost:5003",
+    "AdminService": "https://localhost:5001",
+    "PortalService": "https://localhost:5002"
+  },
+  "RabbitMQ": {
+    "HostName": "localhost",
+    "Port": 5672,
+    "UserName": "guest",
+    "Password": "guest",
+    "VirtualHost": "/",
+    "Enabled": true
+  },
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "Microsoft.Hosting.Lifetime": "Information",
+        "Microsoft.EntityFrameworkCore": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "Seq",
+        "Args": {
+          "serverUrl": "http://localhost:5341"
+        }
+      }
+    ]
+  },
+  "DeveloperSettings": {
+    "EnableDeveloperExceptionPage": true,
+    "EnableSwagger": true,
+    "DisableHttpsRedirection": false,
+    "EnableDetailedErrors": true
+  },
+  "JwtSettings": {
+    "Issuer": "https://localhost:5000",
+    "Audience": "cashdesk-dev",
+    "SecretKey": "dev-secret-key-at-least-32-characters-long-for-development-only",
+    "ExpiryInMinutes": 60
+  },
+  "Organisation": {
+    "OrganisationId": "dev-local"
+  }
+}

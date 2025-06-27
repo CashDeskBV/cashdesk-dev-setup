@@ -1,0 +1,48 @@
+version: '3.9'
+
+services:
+  rabbitmq3:
+    container_name: rabbitmq3
+    image: rabbitmq:3-management
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - "5672:5672"   # AMQP protocol port
+      - "15672:15672" # HTTP management UI
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    restart: unless-stopped
+
+  sql-server-db:
+    container_name: sql-server-db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "<YourStrong@Passw0rd>"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+      - ./docker-data/sqlserver/backup:/var/opt/mssql/backup
+      - ./docker-data/sqlserver/scripts:/var/opt/mssql/scripts
+    restart: unless-stopped
+
+  seq:
+    container_name: seq
+    image: datalust/seq:latest
+    environment:
+      ACCEPT_EULA: "Y"
+    ports:
+      - "5341:80"
+    volumes:
+      - seq_data:/data
+    restart: unless-stopped
+
+volumes:
+  rabbitmq_data:
+    driver: local
+  sqlserver_data:
+    driver: local
+  seq_data:
+    driver: local

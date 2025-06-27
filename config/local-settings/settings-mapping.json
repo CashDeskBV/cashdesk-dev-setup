@@ -1,0 +1,40 @@
+{
+  "settingsMapping": [
+    {
+      "templateFile": "CashDesk.Web.appsettings.local.template.json",
+      "targetPath": "CashDesk.Web/src/CashDesk.Web.Server/appsettings.local.json",
+      "description": "CashDesk Web Server local settings"
+    },
+    {
+      "templateFile": "CashDesk.Web.appsettings.local.template.json",
+      "targetPath": "CashDesk.Web/src/CashDesk.Web.Worker/appsettings.local.json", 
+      "description": "CashDesk Web Worker local settings"
+    },
+    {
+      "templateFile": "CashDesk.Admin.appsettings.local.template.json",
+      "targetPath": "CashDesk.Admin/src/CashDesk.Admin.Server/appsettings.local.json",
+      "description": "CashDesk Admin Server local settings"
+    },
+    {
+      "templateFile": "CashDesk.Admin.appsettings.local.template.json",
+      "targetPath": "CashDesk.Admin/src/CashDesk.Admin.Worker/appsettings.local.json",
+      "description": "CashDesk Admin Worker local settings"
+    },
+    {
+      "templateFile": "CashDesk.Identity.appsettings.local.template.json",
+      "targetPath": "CashDesk.Identity/src/CashDesk.Identity.Server/appsettings.local.json",
+      "description": "CashDesk Identity Server local settings"
+    },
+    {
+      "templateFile": "CashDesk.Portal.appsettings.local.template.json",
+      "targetPath": "CashDesk.Portal/src/CashDesk.Portal.Server/appsettings.local.json",
+      "description": "CashDesk Portal Server local settings"
+    }
+  ],
+  "notes": [
+    "Template files are copied to target locations during setup",
+    "Target files are git-ignored and safe for local customization",
+    "Developers can modify their local files without affecting others",
+    "Re-running setup will not overwrite existing local files"
+  ]
+}
