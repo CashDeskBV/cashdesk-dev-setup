@@ -76,7 +76,10 @@ cashdesk-dev/
 │   ├── start-dev.ps1              # Development environment starter (Windows)
 │   ├── clone-repos.sh             # Repository cloning script
 │   ├── clone-repos.ps1            # Repository cloning script (Windows)
-│   └── update-all.sh              # Update all repositories
+│   ├── copy-local-settings.sh     # Copy local settings templates
+│   ├── copy-local-settings.ps1    # Copy local settings templates (Windows)
+│   ├── update-all.sh              # Update all repositories
+│   └── update-all.ps1             # Update all repositories (Windows)
 ├── docker-data/
 │   └── sqlserver/
 │       ├── backup/                # SQL Server backups
@@ -110,13 +113,21 @@ Run the setup script once to clone all repositories and set up the environment:
 ### Daily Development
 Use the start script to begin development on a specific service:
 ```bash
+# Linux/macOS
 ./scripts/start-dev.sh
+
+# Windows
+.\scripts\start-dev.ps1
 ```
 
 ### Update All Repositories
 Pull latest changes from all repositories:
 ```bash
+# Linux/macOS
 ./scripts/update-all.sh
+
+# Windows
+.\scripts\update-all.ps1
 ```
 
 ### Working on Specific Services
